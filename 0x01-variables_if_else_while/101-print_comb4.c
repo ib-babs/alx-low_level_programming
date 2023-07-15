@@ -15,6 +15,10 @@ int main(void)
 		{
 			for (i = 2; i <= 9; i++)
 			{
+				if (b == i)
+				{
+					continue;
+				}
 				putchar(a + '0');
 				putchar(b + '0');
 				putchar(i + '0');
