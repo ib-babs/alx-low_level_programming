@@ -15,7 +15,7 @@ int main(void)
 		{
 			for (i = 2; i <= 9; i++)
 			{
-				if (b == i)
+				if ((a == b) || (a > b) || (b == i) || (b > i))
 				{
 					continue;
 				}
