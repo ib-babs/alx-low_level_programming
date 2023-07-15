@@ -13,6 +13,10 @@ int main(void)
 	{
 		for (num_2 = 1; num_2 <= 9; num_2++)
 		{
+			if ((num_1 == num_2) || (num_1 > num_2))
+			{
+				continue;
+			}
 			putchar(num_1 + '0');
 			putchar(num_2 + '0');
 
