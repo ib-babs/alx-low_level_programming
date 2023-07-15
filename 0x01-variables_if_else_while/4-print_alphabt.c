@@ -8,7 +8,6 @@ int main(void)
 {
 	char lowercase;
 	char newline = '\n';
-	char uppercase = 'A';
 
 	for (lowercase = 'a'; lowercase <= 'z'; lowercase++)
 	{
