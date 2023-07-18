@@ -8,15 +8,15 @@ void jack_bauer(void)
 {
 	int start = 0;
 
-	while (start < 3)
+	while (start <= 2)
 	{
 		int end = 0;
 
-		while (end < 4)
+		while (end <= 3)
 		{
 			int sec_1 = 0;
 
-			while (sec_1 < 6)
+			while (sec_1 <= 5)
 			{
 				int sec_2 = 0;
 
