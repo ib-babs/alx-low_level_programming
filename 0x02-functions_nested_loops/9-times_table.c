@@ -24,7 +24,7 @@ void times_table(void)
 
 				while (q <= 9)
 				{
-					printf("%2d",  p * q);
+					printf("%-2d",  p * q);
 					if ((q !=  9))
 					{
 						printf(",");
