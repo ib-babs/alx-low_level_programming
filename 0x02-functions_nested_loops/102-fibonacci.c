@@ -6,11 +6,9 @@
  */
 int main(void)
 {
-	int t1, t2, i, sum;
+	int i, sum;
 
-	t1 = 0;
-
-	t2 = 1;
+	unsigned long t1 = 0, t2 = 1;
 
 	sum = t1 + t2;
 
@@ -21,7 +19,7 @@ int main(void)
 		t2 = sum;
 
 		sum = t1 + t2;
-		printf("%d", t2);
+		printf("%lu", t2);
 		if (i != 50)
 		{
 			printf(", ");
