@@ -20,7 +20,11 @@ int main(void)
 		printf("%lld", sum);
 		if (i != 49)
 		{
-			printf(", ");
+			printf(",");
+		}
+		else
+		{
+			printf(" ");
 		}
 	}
 	printf("\n");
