@@ -14,7 +14,7 @@ int main(void)
 
 	sum = t1 + t2;
 
-	for (i = 0; i <= 10; i++)
+	for (i = 0; i <= 50; i++)
 	{
 		t1 = t2;
 
@@ -22,10 +22,11 @@ int main(void)
 
 		sum = t1 + t2;
 		printf("%d", t2);
-		if (i != 10)
+		if (i != 50)
 		{
 			printf(", ");
 		}
 	}
+	printf("\n");
 	return (0);
 }
