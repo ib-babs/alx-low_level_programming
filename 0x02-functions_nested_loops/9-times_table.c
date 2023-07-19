@@ -35,7 +35,6 @@ void times_table(void)
 				printf("\n");
 				p++;
 			}
-			printf(" ");
 			n++;
 		}
 		m++;
