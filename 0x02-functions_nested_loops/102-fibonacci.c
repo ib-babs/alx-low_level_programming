@@ -6,21 +6,19 @@
  */
 int main(void)
 {
-	int i, sum;
+	int i;
 
-	unsigned long t1 = 0, t2 = 1;
+	long long t1 = 0, t2 = 1, sum;
 
-	sum = t1 + t2;
-
-	for (i = 0; i <= 50; i++)
+	for (i = 0; i < 50; i++)
 	{
 		t1 = t2;
 
 		t2 = sum;
 
 		sum = t1 + t2;
-		printf("%lu", t2);
-		if (i != 50)
+		printf("%lld", sum);
+		if (i != 49)
 		{
 			printf(", ");
 		}
