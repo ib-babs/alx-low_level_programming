@@ -6,37 +6,30 @@
  *
  * Return: multiplication table of 9
  */
+
 void times_table(void)
 {
-	int m = 0;
+	int m, n, prod;
 
-	while (m < 1)
+	for (m = 0; m <= 9; m++)
 	{
-		int n = 0;
-
-		while (n < 1)
+		_putchar('0');
+		for (n = 1; n <= 9; n++)
 		{
-			int p = 0;
+			_putchar(',');
+			_putchar(' ');
+			prod = m * n;
 
-			while (p <= 9)
+			if (prod <= 9)
 			{
-				int q = 0;
-
-				while (q <= 9)
-				{
-					printf("%-2d",  p * q);
-					if ((q !=  9))
-					{
-						printf(",");
-						printf(" ");
-					}
-					q++;
-				}
-				printf("\n");
-				p++;
+				_putchar(' ');
 			}
-			n++;
+			else
+			{
+				_putchar((prod / 10) + '0');
+			}
+			_putchar((prod % 10) + '0');
 		}
-		m++;
+		_putchar('\n');
 	}
 }
