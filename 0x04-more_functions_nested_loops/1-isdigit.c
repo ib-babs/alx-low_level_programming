@@ -1,7 +1,7 @@
 #include <ctype.h>
 #include "main.h"
 /**
- * _isupper - Entry point
+ * _isdigit - Entry point
  * @c: Value to be tested
  * Return: Value of c
  */
