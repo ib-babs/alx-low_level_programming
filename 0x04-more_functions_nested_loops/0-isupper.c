@@ -1,4 +1,4 @@
-#include <ctype.c>
+#include <ctype.h>
 #include "main.h"
 /**
  * _isupper - Entry point
@@ -8,7 +8,11 @@
 int _isupper(int c)
 {
 	if (isupper(c))
+	{
 		return (1);
+	}
 	else
+	{
 		return (0);
+	}
 }
