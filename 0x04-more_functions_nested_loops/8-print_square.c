@@ -7,7 +7,7 @@
  */
 void print_square(int size)
 {
-	int i, j, k;
+	int i, j;
 
 	char c = '#';
 
