@@ -15,4 +15,5 @@ void print_array(int *a, int n)
 			printf(", ");
 		printf("%d", a[i]);
 	}
+	putchar('\n');
 }
