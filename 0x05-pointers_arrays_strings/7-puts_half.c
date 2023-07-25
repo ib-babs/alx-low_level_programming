@@ -9,8 +9,10 @@ void puts_half(char *s)
 {
 	int len = strlen(s), middle = len / 2, i;
 
-	if (middle % 2 != 0)
-		printf("%c", s[middle]);
+	int temp = (len - 1) / 2;
+
+	if (temp % 2 != 0)
+		printf("%c", s[temp]);
 	else
 	{
 		for (i = 0; i < middle; i++)
