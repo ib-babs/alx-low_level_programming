@@ -15,7 +15,7 @@ void puts_half(char *s)
 		printf("%c", s[temp]);
 	else
 	{
-		for (i = 1; i < middle; i++)
+		for (i = 1; i <= middle; i++)
 			printf("%c", s[temp + i]);
 	}
 	putchar('\n');
