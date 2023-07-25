@@ -7,7 +7,7 @@
  */
 void puts_half(char *s)
 {
-	int len = strlen(s), middle = (len - 1) / 2, i;
+	int len = strlen(s), middle = len / 2, i;
 
 	int temp = (len - 1) / 2;
 
@@ -15,7 +15,7 @@ void puts_half(char *s)
 		printf("%c", s[temp]);
 	else
 	{
-		for (i = 0; i < middle; i++)
+		for (i = 0; i < middle - 1; i++)
 			printf("%c", s[middle + i]);
 	}
 	putchar('\n');
