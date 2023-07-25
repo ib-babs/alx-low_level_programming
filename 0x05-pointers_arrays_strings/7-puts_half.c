@@ -7,15 +7,13 @@
  */
 void puts_half(char *s)
 {
-	int len = strlen(s), middle = (len - 1) / 2, i;
+	int len = strlen(s), middle = len / 2, i;
 
-	int temp = (len - 1) / 2;
-
-	if (temp % 2 != 0)
-		printf("%c", s[temp]);
+	if (middle % 2 != 0)
+		printf("%c", s[middle]);
 	else
 	{
-		for (i = 0; i <= middle; i++)
+		for (i = 0; i < middle; i++)
 			printf("%c", s[middle + i]);
 	}
 	putchar('\n');
