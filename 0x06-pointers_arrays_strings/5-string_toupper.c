@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <ctype.h>
 /**
  * string_toupper - Change string to uppercase
  * @s: String to convert
@@ -7,5 +8,9 @@
  */
 char *string_toupper(char *s)
 {
-	return (strupr(s));
+	int n, len = strlen(s);
+
+	for (n = 0; n < len; n++)
+		s[n] = toupper(s[n]);
+	return (s);
 }
