@@ -13,7 +13,7 @@ char *leet(char *s)
 
 	char replace[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	int len_s = strlen(s), i, temp, len_arr, j;
+	int len_s = strlen(s), i, len_arr, j;
 
 	len_arr = sizeof(arr) / sizeof(char);
 
