@@ -13,7 +13,7 @@ char *cap_string(char *s)
 
 	for (i = 0; i <= len; i++)
 	{
-		if (isspace(s[i]) || ispunct(s[i]))
+		if (isspace(s[i]) || ispunct(s[i] || s[i] == '\t' || s[i] == '\n'))
 		{
 			temp = i + 1;
 			s[temp] = toupper(s[temp]);
