@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include "main.h"
 /**
  * cap_string - Main entry pointer for modified array
  * @s: String to manipulate
@@ -17,8 +18,6 @@ char *cap_string(char *s)
 			temp = i + 1;
 			s[temp] = toupper(s[temp]);
 		}
-		if (!isupper(s[0]))
-			s[0] = toupper(s[0]);
 	}
-		return (s);
+	return (s);
 }
