@@ -1,4 +1,4 @@
-#include <sring.h>
+#include <string.h>
 /**
  * _strspn - Main pointer function
  * @s: Array of string to test
