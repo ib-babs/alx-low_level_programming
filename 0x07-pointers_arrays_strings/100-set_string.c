@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * set_string - Main entry function
  * @s: Pointer of pointer to address
@@ -6,7 +7,5 @@
 */
 void set_string(char **s, char *to)
 {
-	char *temp;
-	temp = to;
-	*s = temp;
+	*s = to;
 }
