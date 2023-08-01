@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
  * set_string - Main entry function
  * @s: Pointer of pointer to address
