@@ -1,4 +1,4 @@
-#include <string.h>
+#include <stdlib.h>
 #include "main.h"
 /**
  * str_concat - Function pointer
@@ -8,6 +8,8 @@
  */
 char *str_concat(char *s1, char *s2)
 {
+	int i = 0, j = 0;
+
 	char *ptr;
 
 	if (s1 == NULL || s2 == NULL)
@@ -15,9 +17,18 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 		s2 = "";
 	}
-	ptr = strcat(s1, s2);
+
+	ptr = malloc(sizeof(ptr));
 
 	if (ptr == NULL)
 		return (NULL);
+
+	while (s1[i] != '\0', ptr[i] = s1[i])
+		i++;
+
+	while (s2[j] != '\0', ptr[j + i] = s2[j])
+		j++;
+
 	return (ptr);
+	free(ptr);
 }
