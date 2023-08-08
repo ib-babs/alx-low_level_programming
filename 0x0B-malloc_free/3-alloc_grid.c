@@ -8,9 +8,7 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int i = 0, k = 0;
-
-	unsigned int j = 0;
+	int i = 0, k = 0, j = 0;
 
 	int **ptr = malloc(height * sizeof(int *));
 
