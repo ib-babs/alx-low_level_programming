@@ -10,6 +10,8 @@ void free_grid(int **grid, int height)
 {
 	int i;
 
+	grid = (int **)malloc(height * sizeof(int *));
+
 	for (i = 0; i < height; i++)
 	{
 		grid[i] = malloc(height * sizeof(int *));
