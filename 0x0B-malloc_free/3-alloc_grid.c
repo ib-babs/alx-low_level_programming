@@ -26,7 +26,7 @@ int **alloc_grid(int width, int height)
 
 	while (i < width)
 	{
-		while (j < (height * width))
+		while (j < (height * (width + sizeof(int))))
 		{
 			ptr[i][j] = 0;
 			j++;
