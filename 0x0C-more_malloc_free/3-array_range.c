@@ -8,12 +8,18 @@
  */
 int *array_range(int min, int max)
 {
-	int *ptr = calloc(min, sizeof(int *));
+	int *ptr = NULL;
+
+	ptr = malloc(min * sizeof(int *));
 
 	if (min > max && ptr == NULL)
 		return (NULL);
 	while (min <= max)
 	{
+		ptr = realloc(ptr, max * sizeof(int *));
+
+		if (ptr == NULL)
+			return (NULL);
 		ptr[min] = min;
 		min++;
 	}
