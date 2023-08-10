@@ -12,7 +12,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	ptr = calloc(nmemb, size);
 
-	if (nmemb == 0 || size == 0 || ptr == NULL)
+	if (ptr == NULL)
+		return (NULL);
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 	return (ptr);
 }
