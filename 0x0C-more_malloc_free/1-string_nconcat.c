@@ -5,13 +5,11 @@
  * @s1: String 1
  * @s2: String 2
  * @n: Number of character(s) to copy from string 2 to s1
- * Return: Concatenated string based on @n
+ * Return: Concatenated string based on n
  */
 char *str_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i = 0;
-
-	unsigned int j = 0;
+	unsigned int j = 0, i =0;
 
 	char *ptr = NULL;
 
