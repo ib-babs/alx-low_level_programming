@@ -1,4 +1,4 @@
-#include "doog.h"
+#include "dog.h"
 #include <stdlib.h>
 /**
  * free_dog - FUNCTION that free memory allocated to the pointer
