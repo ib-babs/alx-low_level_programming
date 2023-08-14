@@ -1,5 +1,5 @@
-#ifndef STDLIB_H
-#define STDLIB_H
+#ifndef ABS_H
+#define ABS_H
 #include <stdlib.h>
 #define ABS(x) abs(x)
-#endif /* STDLIB_H */
+#endif /* ABS_H */
