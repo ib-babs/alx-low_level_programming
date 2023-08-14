@@ -1,7 +1,7 @@
 #include "dog.h"
 /**
  * init_dog - Main Point
- * @d: Pointer to the struct
+ * @d: Pointer to the struct dog
  * @name: Name of the dog
  * @age: Age of the dog
  * @owner: The owner of the dog
