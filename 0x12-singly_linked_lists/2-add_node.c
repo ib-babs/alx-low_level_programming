@@ -13,7 +13,7 @@ list_t *add_node(list_t **head, const char *str)
 	add_begin->len = strlen(str);
 	add_begin->next = *head;
 
-	if (add_begin == NULL)
+	if (add_begin == NULL && head == NULL)
 	{
 		free(add_begin);
 		return (NULL);
