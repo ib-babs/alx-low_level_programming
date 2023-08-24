@@ -14,10 +14,7 @@ list_t *add_node(list_t **head, const char *str)
 	add_begin->next = *head;
 
 	if (add_begin == NULL && head == NULL)
-	{
-		free(add_begin);
 		return (NULL);
-	}
 	*head = add_begin;
 	return (add_begin);
 }
