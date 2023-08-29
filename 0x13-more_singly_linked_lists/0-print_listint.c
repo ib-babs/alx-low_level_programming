@@ -10,11 +10,11 @@ size_t print_listint(const listint_t *head)
 	size_t count = 0;
 
 	if (ptr == NULL)
-		return (-1);
+		return (0);
 	while (ptr != NULL)
 	{
-		count++;
 		printf("%u\n", ptr->n);
+		count++;
 		ptr = ptr->next;
 	}
 	return (count);
