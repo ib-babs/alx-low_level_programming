@@ -7,7 +7,7 @@
  * Return: If the list is not looped - 0.
  * Otherwise - the number of unique nodes in the list.
  */
-size_t looped_listint_len(listint_t *head)
+size_t looped_listint_len(const listint_t *head)
 {
 	const listint_t *tortoise, *hare;
 	size_t nodes = 1;
@@ -65,7 +65,7 @@ size_t free_listint_safe(listint_t **h)
 
 	if (nodes == 0)
 	{
-		for (; h != NULL && *h != NULL; nodes++)
+		for (; (h != NULL) && (*h != NULL); nodes++)
 		{
 			tmp = (*h)->next;
 			free(*h);
