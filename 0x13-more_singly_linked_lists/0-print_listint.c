@@ -9,6 +9,8 @@ size_t print_listint(const listint_t *head)
 	const listint_t *ptr = head;
 	size_t count = 0;
 
+	if (ptr == NULL)
+		return (-1);
 	while (ptr != NULL)
 	{
 		count++;
