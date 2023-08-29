@@ -1,7 +1,6 @@
 #include "lists.h"
 size_t looped_listint_len(const listint_t *head);
-size_t print_listint_safe(const listint_t *head);
-
+size_t free_listint_safe(listint_t **h);
 /**
  * looped_listint_len - Counts the number of unique nodes
  * in a looped listint_t linked list.
