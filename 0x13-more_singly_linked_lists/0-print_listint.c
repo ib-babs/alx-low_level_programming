@@ -9,7 +9,7 @@ size_t print_listint(const listint_t *head)
 	size_t count = 0;
 
 	if (head == NULL)
-		return (-1);
+		return (0);
 	while (head != NULL)
 	{
 		printf("%d\n", head->n);
