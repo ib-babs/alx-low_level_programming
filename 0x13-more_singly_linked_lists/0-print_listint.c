@@ -6,11 +6,11 @@
  */
 size_t print_listint(const listint_t *head)
 {
-	int count = 0;
+	size_t count = 0;
 
 	while (head != NULL)
 	{
-		printf("%d\n", head->n);
+		printf("%u\n", head->n);
 		head = head->next;
 		count++;
 	}
