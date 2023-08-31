@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _pow - Power
+ * _pow2 - Power
  * @base: Base
  * @n: Number
  * Return: Power of number
@@ -44,10 +44,10 @@ void print_binary(unsigned long int n)
 		if (checker == divisor)
 		{
 			f = 1;
-			printf("%d", 1);
+			putchar('1');
 		}
 		else if (f == 1 || divisor == 1)
-			printf("%d", 0);
+			putchar('0');
 		divisor >>= 1;
 	}
 }
