@@ -15,8 +15,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (*b != 48 && *b != 49)
 			return (0);
-		sum += (int)pow(2, length) * (*b - '0');
-		*b = *b++;
+		sum += (int)pow(2, length) * (*b++ - '0');
 		length--;
 	}
 	return (sum);
