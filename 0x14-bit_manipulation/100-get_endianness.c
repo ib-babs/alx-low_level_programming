@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * get_endianess - Check the endianess
+ * get_endianness - Check the endianess
  * Return: 0 or 1
  */
-int get_endianess(void)
+int get_endianness(void)
 {
 	int x;
 	char *y;
