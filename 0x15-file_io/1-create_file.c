@@ -17,7 +17,8 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 		text_content = "";
 
-	for (bytes_written = 0; text_content[bytes_written]; bytes_written++);
+	for (bytes_written = 0; text_content[bytes_written]; bytes_written++)
+		;
 
 	mode_perm = write(fd, text_content, bytes_written);
 
