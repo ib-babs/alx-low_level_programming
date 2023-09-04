@@ -1,9 +1,16 @@
 #include "main.h"
+/**
+ * read_textfile - Read data from the file
+ * @filename: Name of the file
+ * @letters: Sizeof the letters
+ * Return: Size of the letters
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd, bytes_written;
 	ssize_t i;
 	char *buffer = malloc(letters * sizeof(char));
+
 	if (filename == NULL)
 		return (0);
 
@@ -20,6 +27,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	for (i = 0; buffer[i]; i++)
 		putchar(buffer[i]);
 	close(fd);
-
+	free(buffer);
 	return (bytes_written);
 }
