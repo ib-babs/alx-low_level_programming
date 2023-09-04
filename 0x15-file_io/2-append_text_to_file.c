@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * create_file - Create a file
+ * append_text_to_file - Append data to a file
  * @filename: Name if the file
  * @text_content: Content of the file
  * Return: 1 on success, -1 on failure
