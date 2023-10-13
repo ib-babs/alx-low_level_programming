@@ -1,0 +1,1 @@
+Simualting **Double Linked List✔** in C. 
