@@ -16,6 +16,17 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (!new_hash_table->array)
 		return (NULL);
+	for (unsigned long int i = 0; i < size; i++)
+		new_hash_table->array[i] = malloc(sizeof(char *));
 
 	return (new_hash_table);
+}
+
+int main(void)
+{
+	hash_table_t *ht = hash_table_create(20);
+	unsigned int i;
+	for (i = 0; ht->array[i]; i++)
+		printf("%p\n", (void *)ht->array[i]);
+	return 0;
 }
