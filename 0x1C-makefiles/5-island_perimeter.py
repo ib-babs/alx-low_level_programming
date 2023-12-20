@@ -7,18 +7,13 @@ def island_perimeter(grid):
     land_zone = 1
     perimeter = 0
 
-    for row in range(len(grid)):
-        if row == 0 or row == len(grid):
-            continue
+    for row in range(1, len(grid)):
         for col in range(len(grid[row])):
-            if col == 0 or col == len(grid[row]):
-                continue
-            else:
+            if col > 0:
                 if grid[row][col] == land_zone:
                     env_list = [grid[row - 1][col], grid[row]
                                 [col + 1], grid[row + 1][col], grid[row][col - 1]]
                     count = 0
-                    print(env_list)
                     for i in env_list:
                         if i == 0:
                             count += 1
