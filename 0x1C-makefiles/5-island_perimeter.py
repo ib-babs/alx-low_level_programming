@@ -11,7 +11,9 @@ def island_perimeter(grid):
         if row == 0 or row == len(grid):
             continue
         for col in range(len(grid[row])):
-            if col > 0:
+            if col == 0 or col == len(grid[row]):
+                continue
+            else:
                 if grid[row][col] == land_zone:
                     env_list = [grid[row - 1][col], grid[row]
                                 [col + 1], grid[row + 1][col],
