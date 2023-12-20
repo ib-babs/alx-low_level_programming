@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Returns the perimeter of the island described in grid:"""
+"""
+Island Perimeter
+Returns the perimeter of the island described in grid
+"""
 
 
 def island_perimeter(grid):
@@ -7,9 +10,7 @@ def island_perimeter(grid):
     land_zone = 1
     perimeter = 0
 
-    for row in range(len(grid)):
-        if row == 0 or row == len(grid):
-            continue
+    for row in range(1, len(grid)):
         for col in range(len(grid[row])):
             if col == 0 or col == len(grid[row]):
                 continue
