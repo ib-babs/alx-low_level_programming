@@ -1,78 +1,35 @@
 #include "search_algos.h"
 
 /**
- * print_array - Print array of number
- * @array: is a pointer to the first element of the array to search in
- * @prev: Prev number
- * Return: Void
+ * jump_search - performs jump search
+ * @array: the integer array
+ * @size: its size
+ * @value: value to search for
+ *
+ * Return: the index found or -1
  */
-void print_array(int *array, int prev)
-{
-	printf("Value checked array[%d] = [%d]\n", array[prev], prev);
-}
-
-/**
- * print_found - Print found number
- * @array: is a pointer to the first element of the array to search in
- * @prev: Prev number
- * @step: Next number by step of sqrt(size)
- * @size: Size of array
- * Return: Void
- */
-void print_found(int *array, int prev, int step, size_t size)
-{
-	size_t i;
-
-	if (prev - (int)sqrt(size) > 0)
-
-		printf("Value found between indexes [%d] and [%d]\n",
-			   prev - (int)sqrt(size), step - (int)sqrt(size));
-	else if (prev - (int)sqrt(size) < 0)
-	{
-		print_array(array, prev);
-		printf("Value found between indexes [%d] and [%d]\n",
-			   prev, step);
-	}
-
-	for (i = prev - (int)sqrt(size); i <= prev; i++)
-	{
-		print_array(array, i);
-		if (i == size - 1)
-			break;
-	}
-}
-/**
- * jump_search - Searches for a value in a sorted array of integers
- * @array: pointer to the first element of the array to search in
- * @size: size is the number of elements in array
- * @value: the value to search for
- * Return: return the first index where value is located
- */
-
 int jump_search(int *array, size_t size, int value)
 {
-	int prev = 0, step = sqrt(size), i;
+	size_t i = 0, j = sqrt(size);
 
-	if (array == NULL)
+	if (!array)
 		return (-1);
 
-	while (array[(int)fmin(step, size) - 1] < value)
+	while (i < size && array[i] < value)
 	{
-		print_array(array, prev);
-		prev = step;
-		step = step + sqrt(size);
-		if (prev >= (int)size)
-		{
-			print_found(array, prev, step, size);
-			return (-1);
-		}
+		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
+		i += j;
 	}
 
-	for (i = prev; i < (int)fmin(step, size); i++)
+	j = i - j;
+	printf("Value found between indexes [%lu] and [%lu]\n", j, i);
+	i = i >= size ? size - 1 : i;
+	while (j <= i)
 	{
-		print_found(array, i, step, step);
-		if (array[i] == value)
-			return (i);
+		printf("Value checked array[%lu] = [%d]\n", j, array[j]);
+		if (array[j] == value)
+			return (j);
+		j++;
 	}
 	return (-1);
 }
